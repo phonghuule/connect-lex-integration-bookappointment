@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion : 2010-09-09
+Description: Creates lambda functions and IAM Role for Lambda. Run this in NVirginia
+
+Resources:
+    ##############################################
+    ##############################################
+    LexBookAppointmentRole:
+      Type: AWS::IAM::Role
+      Properties:
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+              - lambda.amazonaws.com
+            Action:
+            - sts:AssumeRole
+        Path: "/"
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/AmazonLexFullAccess
+          - arn:aws:iam::aws:policy/AmazonSNSFullAccess
+          - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+          - arn:aws:iam::aws:policy/AWSXrayFullAccess
+          - arn:aws:iam::aws:policy/CloudWatchLogsFullAccess
+        RoleName: LexBookAppointmentRole
+
+    LexDentistAppointmentFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Handler: lambda_function.lambda_handler
+        Role:
+          Fn::GetAtt:
+            - LexBookAppointmentRole
+            - Arn
+        Code:
+          S3Bucket: connectlexdevlab
+          S3Key: lex-connect-book-appointment.zip
+        Runtime: python3.6
+        Timeout: 20
+        MemorySize: 256
+        TracingConfig:
+          Mode: Active
+        FunctionName: lex-connect-book-appointment
+
+    AppointmentTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: phoneNumber
+            AttributeType: S
+
+        KeySchema:
+          -
+            AttributeName: phoneNumber
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 50
+          WriteCapacityUnits: 50
+        TableName: Appointment

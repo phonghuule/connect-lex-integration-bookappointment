@@ -1,0 +1,12 @@
+{
+    "enumerationValues": [
+        {
+            "value": "whitening"
+        },
+        {
+            "value": "cleaning"
+        }
+    ],
+    "name": "AppointmentTypeValue",
+    "description": "Types of appointment"
+}
