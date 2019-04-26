@@ -40,6 +40,7 @@ Configure the slots as follows:
 ![sparkles](images/Intent_BookAppointment_Slots.png)
 
 5. Set Fulfillment function
+
 ![sparkles](images/Intent_BookAppointment_Fulfillment.png)
 
 
@@ -47,10 +48,11 @@ Configure the slots as follows:
 1.	Choose to **Add Intents**. Name intent as CheckAppointment
 ![sparkles](images/Intent_CheckAppointment_Create.png)
 
-2. Create Utterances - Spoken or typed phrases that will invoke our intent
+1. Create Utterances - Spoken or typed phrases that will invoke our intent
 ![sparkles](images/Intent_CheckAppointment_Utterances.png)
 
 3.	Set Fulfillment function
+
 ![sparkles](images/Intent_BookAppointment_Fulfillment.png)
 
 
@@ -100,6 +102,7 @@ Click on the **Instance Alias**
 ![sparkles](images/connect-contactflow-playprompt-1.png)
 
 11.	Open the Play prompt block and Text to speech (Ad hoc), Enter text. Type “All of our agents are busy at the moment. Please call again”. Save the block.
+
 ![sparkles](images/connect-contactflow-playprompt-2.png)
 
 12.	Under **Terminate/Transfer**, drag **Disconnect / hang up**, connect it to the **Play Prompt block** and the **BookAppointment** and **CheckAppointment** intents. 
@@ -118,7 +121,7 @@ Click on the **Instance Alias**
 
 ![sparkles](images/connect-phonenumber-2.png)
 
-4.	In the Contact flow/IVR menu, choose the **SydneySummitContatFlow** flow that you just created.
+4.	In the **Contact flow/IVR** menu, choose the **SydneySummitContatFlow** flow that you just created.
 ![sparkles](images/connect-contactflow.png)
 
 5.	Choose **Save.**
