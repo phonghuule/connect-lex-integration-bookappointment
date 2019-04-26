@@ -43,6 +43,24 @@ Resources:
           Mode: Active
         FunctionName: lex-connect-book-appointment
 
+    LexDeleteBotFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Handler: index.handler
+        Role:
+          Fn::GetAtt:
+            - LexBookAppointmentRole
+            - Arn
+        Code:
+          S3Bucket: connectlexdevlab
+          S3Key: lex-connect-delete-bot.zip
+        Runtime: Node.js 8.10
+        Timeout: 300
+        MemorySize: 256
+        TracingConfig:
+          Mode: Active
+        FunctionName: lex-connect-delete-bot
+
     AppointmentTable:
       Type: AWS::DynamoDB::Table
       Properties:

@@ -76,7 +76,7 @@ Click on the **Instance Alias**
 ![sparkles](images/connect-lex-login.png)
 
 
-2. Choose **Routing -> Contact flows -> Create contact flow**, and type a **SydneySummitContactFlow**
+2. Choose **Routing -> Contact flows -> Create contact flow**, and type a **SydneySummitContactFlow-yourname**
 ![sparkles](images/connect-lex-contactflox.png)
 ![sparkles](images/connect-contact-flow-name.png)
 
@@ -121,7 +121,7 @@ Click on the **Instance Alias**
 
 ![sparkles](images/connect-phonenumber-2.png)
 
-4.	In the **Contact flow/IVR** menu, choose the **SydneySummitContatFlow** flow that you just created.
+4.	In the **Contact flow/IVR** menu, choose the **SydneySummitContatFlow-yourname** flow that you just created.
 ![sparkles](images/connect-contactflow.png)
 
 5.	Choose **Save.**
