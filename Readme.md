@@ -18,7 +18,9 @@ In this lab we, you will be building a contact center using Amazon Connect and i
 
 1.	Open the Amazon Lex Console in N.Virginia Region at https://console.aws.amazon.com/lex/home?region=us-east-1#
 2.	On the Bots page, choose **Create**
+
 ![sparkles](/images/Bot_Create.png)
+
 3.	Create a **‘Custom bot’**.
 Name the Bot as **BookAppointment**
 Complete other fields as specificed in the picture below and choose **Create**.
@@ -76,7 +78,7 @@ Click on the **Instance Alias**
 ![sparkles](images/connect-lex-login.png)
 
 
-2. Choose **Routing -> Contact flows -> Create contact flow**, and type a **SydneySummitContactFlow-yourname**
+1. Choose **Routing -> Contact flows -> Create contact flow**, and type a **SydneySummitContactFlow-yourname**
 ![sparkles](images/connect-lex-contactflox.png)
 ![sparkles](images/connect-contact-flow-name.png)
 
