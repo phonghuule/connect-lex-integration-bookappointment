@@ -23,9 +23,10 @@ Resources:
           - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
           - arn:aws:iam::aws:policy/AWSXrayFullAccess
           - arn:aws:iam::aws:policy/CloudWatchLogsFullAccess
+          - arn:aws:iam::aws:policy/AWSLambdaFullAccess
         RoleName: LexBookAppointmentRole
 
-    LexDentistAppointmentFunction:
+    LexBookAppointmentFunction:
       Type: AWS::Lambda::Function
       Properties:
         Handler: lambda_function.lambda_handler
@@ -46,7 +47,7 @@ Resources:
     LexDeleteBotFunction:
       Type: AWS::Lambda::Function
       Properties:
-        Handler: index.handler
+        Handler: lambda_function.lambda_handler
         Role:
           Fn::GetAtt:
             - LexBookAppointmentRole
@@ -54,9 +55,9 @@ Resources:
         Code:
           S3Bucket: connectlexdevlab
           S3Key: lex-connect-delete-bot.zip
-        Runtime: Node.js 8.10
+        Runtime: python3.6
         Timeout: 300
-        MemorySize: 256
+        MemorySize: 512
         TracingConfig:
           Mode: Active
         FunctionName: lex-connect-delete-bot

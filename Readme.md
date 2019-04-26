@@ -130,3 +130,14 @@ Click on the **Instance Alias**
 
 ### Try it
 Dial the number you claimed above, and follow the prompts.
+
+### Clean Up
+1. Release the number you claimed
+
+![sparkles](images/connet-release.png)
+
+2. Run Lambda Function **lex-connect-delete-bot** in **N.Virginia** to delete Lex Bot
+
+![sparkles](images/connect_cleanup_3.png)
+
+![sparkles](images/connect_cleanup.png)
