@@ -45,6 +45,7 @@ Configure the slots as follows:
 
 ![sparkles](images/Intent_BookAppointment_Fulfillment.png)
 
+6. Save Intent
 
 #### **Create CheckAppointment Intent**
 1.	Choose to **Add Intents**. Name intent as CheckAppointment
@@ -56,6 +57,8 @@ Configure the slots as follows:
 3.	Set Fulfillment function
 
 ![sparkles](images/Intent_BookAppointment_Fulfillment.png)
+
+4. Save Intent
 
 
 #### Build and Publish Lex Bot ####
