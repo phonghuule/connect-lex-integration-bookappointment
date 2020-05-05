@@ -1,6 +1,6 @@
 # **Build a contact center for booking and checking appointment with AWS Connect/Lex/Lambda**
 
-This lab is provided as part of **[AWS Summit Online!](https://aws.amazon.com/events/summits/online/)**.
+This lab is provided as part of **[AWS Summit Online](https://aws.amazon.com/events/summits/online/)**.
 
 ℹ️ You will run this lab in your own AWS account. Please follow directions at the end of the lab to remove resources to avoid future costs.
 
