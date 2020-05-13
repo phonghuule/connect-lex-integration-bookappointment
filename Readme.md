@@ -181,20 +181,13 @@ You will create another intend for checking appointments.
 
 ![](images/Bot_Publish.png)
 
-**24.** Expand the **Test Chatbot** panel (on the very right).
-
-**25.** Try having a conversation with your bot, such as:
-
-- `Book appointment`
-- Pick a Date and a timeslot (if there is no availability, try the other days)
-
 ## Create Amazon Connect Instance
 
 You will now use Amazon Connect to create a virtual contact center. It will use your Lex Bot to interact with callers.
 
-**26.** In the **Services** menu, select **Amazon Connect**.
+**24.** In the **Services** menu, select **Amazon Connect**.
 
-**27.** Click **Get started**, then configure:
+**25.** Click **Get started**, then configure:
 
 - **Access URL:** Enter your initials and a random number (eg `jb642`)
 - Click **Next step**
@@ -210,13 +203,13 @@ You will now use Amazon Connect to create a virtual contact center. It will use 
 
 Wait until Amazon Connect finishes creating your virtual contact center.
 
-**28.** Click the **Amazon Connect AWS console** link at the very bottom of the page.
+**26.** Click the **Amazon Connect AWS console** link at the very bottom of the page.
 
-**29.** Click the name of your Connect instance in the **Instance Alias** column.
+**27.** Click the name of your Connect instance in the **Instance Alias** column.
 
-**30.** In the left navigation pane, click **Contact flows**.
+**28.** In the left navigation pane, click **Contact flows**.
 
-**31.** Under **Amazon Lex**:
+**29.** Under **Amazon Lex**:
 
 - For **Region**, select **Asia Pacific: Sydney** (which is where you just created the Lex Bot)
 - For **Bot**, select **BookAppointment**
@@ -228,30 +221,30 @@ Note: It should now display the message "No Lex bots available to add" under the
 
 This tells Amazon Connect to use your Lex Bot to interact with users.
 
-**32.** In the left navigation pane, click **Overview**.
+**30.** In the left navigation pane, click **Overview**.
 
-**33.** Click **Login as Administrator**.
+**31.** Click **Login as Administrator**.
 
 ![](images/connect-lex-login.png)
 
 You will now configure the call flow that your callers will experience.
 
-**34.** In the left navigation pop-out menu, choose **Routing -> Contact flows**.
+**32.** In the left navigation pop-out menu, choose **Routing -> Contact flows**.
 
 ![](images/connect-lex-contactflox.png)
 
-**35.** Click **Create contact flow**.
+**33.** Click **Create contact flow**.
 
-**36.** Click **Enter a name** (in the top-left corner), then enter: `Lex lab`
+**34.** Click **Enter a name** (in the top-left corner), then enter: `Lex lab`
 
-**37.** Under **Interact**, drag a **Get customer input** block onto the designer.
+**35.** Under **Interact**, drag a **Get customer input** block onto the designer.
 
-**38.** Click the heading of the **Get customer input** block to display its settings, then:
+**36.** Click the heading of the **Get customer input** block to display its settings, then:
 
 - Select **Text-to-speech or chat text**
 - **Enter text:** `To make an appointment, press or say 1. To check an appointment, press or say 2`
 
-**39.** Below that, click the **Amazon Lex** heading, then:
+**37.** Below that, click the **Amazon Lex** heading, then:
 
 - **Select an existing Lex bot:** _BookAppointment_
 - **Alias:** `BookAppointment`
@@ -272,48 +265,48 @@ You will now configure the call flow that your callers will experience.
 
 ![](images/connect-contactflow-addintents.png)
 
-**40.** Connect the blocks by dragging a line from **Entry Point - Start** to the **Get customer input** block.
+**38.** Connect the blocks by dragging a line from **Entry Point - Start** to the **Get customer input** block.
 
 ![](images/connect-contactflow-getcustomerinput-2.png)
 
-**41.** Under **Interact**, drag a **Play prompt** block onto the designer, then:
+**39.** Under **Interact**, drag a **Play prompt** block onto the designer, then:
 
 - Connect **Default** to **Play Prompt**
 - Connect **Error** to **Play Prompt**
 
 ![](images/connect-contactflow-playprompt-1.png)
 
-**42.** Click the title of the **Play prompt** block, then:
+**40.** Click the title of the **Play prompt** block, then:
 
 - Click **Text-to-speech or chat text**
 - **Enter text:** `All of our agents are busy at the moment. Please call again.`
 - Click **Save**
 
-**43.** On the left, expand **Terminate/Transfer** and drag **Disconnect / hang up** onto the designer, then:
+**41.** On the left, expand **Terminate/Transfer** and drag **Disconnect / hang up** onto the designer, then:
 
 - Connect it to the other blocks as shown:
 
 ![](images/connect-contactflow-disconnect.png)
 
-**44.** Click **Save** (in the top right).
+**42.** Click **Save** (in the top right).
 
-**45.** Click **Publish**, then click **Publish**.
+**43.** Click **Publish**, then click **Publish**.
 
 ### Assign the contact flow to a phone number
 
-**46.** In the left navigation pop-out menu, choose **Routing -> Phone numbers**.
+**44.** In the left navigation pop-out menu, choose **Routing -> Phone numbers**.
 
 ![](images/connect-phonenumber-1.png)
 
-**47.** Click **Claim a number**
+**45.** Click **Claim a number**
 
-**49.** Select a phone number in a location of your choice.
+**46.** Select a phone number in a location of your choice.
 
 ![](images/connect-phonenumber-2.png)
 
-**50.** Towards the bottom of the page, for **Contact flow / IVR** select _Lex Lab_.
+**47.** Towards the bottom of the page, for **Contact flow / IVR** select _Lex Lab_.
 
-**51.** Click **Save**. It will take a few minutes for the Contact Flow to be effective.
+**48.** Click **Save**. It will take a few minutes for the Contact Flow to be effective.
 
 ### Try it!
 
@@ -326,43 +319,43 @@ Use your phone to call the number you claimed, and follow the prompts.
 
 Once you have finished testing the lab, follow these instructions to delete the resources from your AWS account. **This will avoid any future costs for the services uses.**
 
-**52.** To release the number you claimed:
+**49.** To release the number you claimed:
 
 - Select the phone number and click **Release**
 
 ![](images/connet-release.png)
 
-**53.** Close the Amazon Lex administrator browser tab (with the blue cloud icon)
+**50.** Close the Amazon Lex administrator browser tab (with the blue cloud icon)
 
-**54.** Return to the Amazon Connect management console browser tab (with the orange cube icon), then:
+**51.** Return to the Amazon Connect management console browser tab (with the orange cube icon), then:
 
 - In the left navigation pane, click **Amazon Connect** (above _Overview_)
 - Select (tick) the Instance Alias (tick the box, do not click the link)
 - Click **Remove**
 - You will be asked to type the name of your instance to confirm deletion
 
-**55.** In the **Services** menu, select **Amazon Lex**.
+**52.** In the **Services** menu, select **Amazon Lex**.
 
-**56.** Click **BookAppointment**, then:
+**53.** Click **BookAppointment**, then:
 
 - Click the **Settings** tab
 - Delete ⨂ the _BookAppointment_ alias
 
-**57.** Click the left arrow in the top-left corner to return to the Lex dashboard.
+**54.** Click the left arrow in the top-left corner to return to the Lex dashboard.
 
-**58.** Click the   ⃝ circle beside **BookAppointment**, then:
+**55.** Click the   ⃝ circle beside **BookAppointment**, then:
 
 - In the **Actions** menu, click **Delete**
 - Click **Continue**
 
-**59.** In the left navigation pane, click **Intents**, then:
+**56.** In the left navigation pane, click **Intents**, then:
 
 - Delete both intents
 
-**60.** In the left navigation pane, click **Slot types**, then:
+**57.** In the left navigation pane, click **Slot types**, then:
 
 - Delete the displayed slot type
 
-**61.** In the **Services** menu, select **CloudFormation**, then:
+**58.** In the **Services** menu, select **CloudFormation**, then:
 
 - Delete the **LexFunction** stack.
