@@ -28,7 +28,7 @@ Amazon Lex is currently available in the N. Virginia, Oregon, Sydney and Ireland
 
 **1.** Login to your AWS account.
 
-**2.** Right-click this link and open in a new browser tab: [Launch Stack into the Sydney Region with CloudFormation](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/new?stackName=LexFunction&templateURL=https://s3-ap-southeast-2.amazonaws.com/share.jr-class.net/lex-connect-book-appointment.yaml)
+**2.** Right-click this link and open in a new browser tab: [Launch Stack into the Sydney Region with CloudFormation](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/new?stackName=LexFunction&templateURL=https://s3-ap-southeast-2.amazonaws.com/huu-shared/aimlinnovate/amazonconnect/connect-lex-integration.yaml)
 
 The CloudFormation console will be displayed, with some information already entered.
 
