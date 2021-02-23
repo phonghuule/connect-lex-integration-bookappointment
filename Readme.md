@@ -17,6 +17,7 @@ At the end of the lab, we will also explore [Contact Lens for Amazon Connect](ht
 
 
 ## **This lab has the following sections:**
+- [Getting started with Markdown](#getting-started-with-markdown)
 - [Section 1: Launch AWS CloudFormation Stack](#section-1-launch-cloudformation) 
 - [Section 2: Create Lex Chat Bot](#Section-2:-Create-Lex-Chat-Bot) 
 - [Section 3: Create Amazon Connect Instance](#Section-3:-Create-Amazon-Connect-Instance)
