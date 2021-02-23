@@ -363,7 +363,7 @@ Use your phone to call the number you claimed, and follow the prompts. The Lex c
 
 ![](images/Contact_Control_Panels.png)
 
-Remember to set the staus as Available
+- Remember to set the staus as Available
 
 ![](images/ccp_available.png)
 
