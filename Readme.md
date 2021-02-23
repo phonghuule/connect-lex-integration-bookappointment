@@ -222,7 +222,7 @@ You will now use Amazon Connect to create a virtual contact center. It will use 
 
 Wait until Amazon Connect finishes creating your virtual contact center.
 
-**3.3** ** Click the **[Amazon Connect AWS console](https://ap-southeast-2.console.aws.amazon.com/connect/home?region=ap-southeast-2)**.
+**3.3** Click the **[Amazon Connect AWS console](https://ap-southeast-2.console.aws.amazon.com/connect/home?region=ap-southeast-2)**.
 
 **3.4.** Click the name of your Connect instance in the **Instance Alias** column.
 
