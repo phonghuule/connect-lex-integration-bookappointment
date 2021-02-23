@@ -17,14 +17,13 @@ At the end of the lab, we will also explore [Contact Lens for Amazon Connect](ht
 
 
 ## **This lab has the following sections:**
-- [Getting started with Markdown](#getting-started-with-markdown)
-- [Section 1: Launch AWS CloudFormation Stack](#section-1-:-launch-cloudformation) 
+- [1. Launch AWS CloudFormation Stack](#1.-launch-cloudformation) 
 - [Section 2: Create Lex Chat Bot](#Section-2:-Create-Lex-Chat-Bot) 
 - [Section 3: Create Amazon Connect Instance](#Section-3:-Create-Amazon-Connect-Instance)
 - [Section 4: Amazon Connect Lex Integration](#Section-4:-Amazon-Connect-Lex-Integration) 
 - [Section 5: Analyze Customer Experience with Contact Lens](#Section-5:-Analyze-Customer-Experience-with-Contact-Lens) 
 
-## Section 1 : Launch CloudFormation
+## 1. Launch CloudFormation
 
 You will use AWS CloudFormation to deploy an AWS Lambda function in your AWS account. It will be deployed in the **Sydney region**. Please ensure you follow directions at the end of the lab to delete the CloudFormation stack to remove resources.
 
