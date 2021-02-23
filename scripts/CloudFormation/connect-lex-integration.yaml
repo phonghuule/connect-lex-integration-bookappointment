@@ -35,8 +35,8 @@ Resources:
             - LexBookAppointmentRole
             - Arn
         Code:
-          S3Bucket: connectlexdevlab
-          S3Key: lex-connect-book-appointment.zip
+          S3Bucket: huu-shared
+          S3Key: aimlinnovate/amazonconnect/lex-connect-book-appointment.zip
         Runtime: python3.6
         Timeout: 20
         MemorySize: 256
@@ -53,8 +53,8 @@ Resources:
             - LexBookAppointmentRole
             - Arn
         Code:
-          S3Bucket: connectlexdevlab
-          S3Key: lex-connect-delete-bot.zip
+          S3Bucket: huu-shared
+          S3Key: aimlinnovate/amazonconnect/lex-connect-delete-bot.zip
         Runtime: python3.6
         Timeout: 300
         MemorySize: 512

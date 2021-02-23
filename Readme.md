@@ -7,20 +7,23 @@ This lab is provided as part of **[AWS Innovate AI/ML Edition](https://aws.amazo
 ## **Overview**
 In this lab, you will be building a contact center using Amazon Connect and integrating with Amazon Lex. Amazon Lex interprets dual-tone multi-frequency signaling (DTMF) digits entered on a keypad. It matches the intent based on that input in the same way it matches the intent when you speak an utterance. This provides for greater flexibility for customers to interact with your contact center.
 
+At the end of the lab, we will also explore [Contact Lens for Amazon Connect](https://aws.amazon.com/connect/contact-lens/), a feature of Amazon Connect, enables you to better understand the sentiment and trends of customer conversations to identify crucial company and product feedback. 
+
 **Duration:** Approximately 1 hour
 
 ## **Architecture**
 
 ![](images/Architecture-Diagram.png)
 
-**Overview**
 
-- Launch AWS CloudFormation Stack
-- Create Lex Chat Bot
-- Create Amazon Connect Instance
-- Amazon Connect Lex Integration
+**This lab has the following sections:**
+[Section 1: Launch AWS CloudFormation Stack](#Section-1:-Launch-CloudFormation) 
+[Section 2: Create Lex Chat Bot](#Section-2:-Create-Lex-Chat-Bot) 
+[Section 3: Create Amazon Connect Instance](#Section-3:-Create-Amazon-Connect-Instance)
+[Section 4: Amazon Connect Lex Integration](#Section-4:-Amazon-Connect-Lex-Integration) 
+[Section 5: Analyze Customer Experience with Contact Lens](#Section-5:-Analyze-Customer-Experience-with-Contact-Lens) 
 
-## Setup: Launch AWS CloudFormation Stack
+## Section 1: Launch CloudFormation
 
 You will use AWS CloudFormation to deploy an AWS Lambda function in your AWS account. It will be deployed in the **Sydney region**. Please ensure you follow directions at the end of the lab to delete the CloudFormation stack to remove resources.
 
@@ -46,13 +49,13 @@ This will create an AWS Lambda function that you will use with Amazon Lex. There
 
 You will now create a Lex Chat Bot that will be used to book appointments at a dental surgery. It will be capable of booking appointments for cleaning and whitening, and can also check and cancel appointments.
 
-**6.** In the **Services** menu, click **Amazon Lex**.
+**6.** In the **Services** menu, click **[Amazon Lex](https://ap-southeast-2.console.aws.amazon.com/lex/home?region=ap-southeast-2#)**.
 
 **7.** Confirm that you are running in the **Sydney** region (shown in the top-right of the console). If a different region is showing, change to **Sydney**.
 
 **8.** Click **Get Started**.
 
-You will be presented with a "Create your bot" page. A number of sample bots are provided, but you will create your own custom bot.
+You will be presented with a "Create your bot" psage. A number of sample bots are provided, but you will create your own custom bot.
 
 **9.** Click **Custom bot**, then configure:
 
@@ -92,7 +95,7 @@ Slot Types are used to define special values that a user will provide. You will 
 - **Values:**
   - `cleaning`
   - `whitening`
-- Click **Save slot type**
+- Click **Add slot to Intent**
 
 ### Create Utterances
 
@@ -163,6 +166,9 @@ You will create another intend for checking appointments.
 
 **21.** Click **Save Intent** (at the bottom of the page).
 
+### Create SpeakToAgent Intent
+
+
 ### Build and Publish Lex Bot
 
 **22.** Click **Build** (in the top-right), then:
@@ -181,11 +187,14 @@ You will create another intend for checking appointments.
 
 ![](images/Bot_Publish.png)
 
+## Test Chat Bot##
+Test the chat bot to make sure it's working as expected
+
 ## Create Amazon Connect Instance
 
 You will now use Amazon Connect to create a virtual contact center. It will use your Lex Bot to interact with callers.
 
-**24.** In the **Services** menu, select **Amazon Connect**.
+**24.** In the **Services** menu, select **[Amazon Connect](https://ap-southeast-2.console.aws.amazon.com/connect/home?region=ap-southeast-2)**.
 
 **25.** Click **Get started**, then configure:
 
@@ -203,7 +212,7 @@ You will now use Amazon Connect to create a virtual contact center. It will use 
 
 Wait until Amazon Connect finishes creating your virtual contact center.
 
-**26.** Click the **Amazon Connect AWS console** link at the very bottom of the page.
+**26.** Click the **[Amazon Connect AWS console](https://ap-southeast-2.console.aws.amazon.com/connect/home?region=ap-southeast-2)**.
 
 **27.** Click the name of your Connect instance in the **Instance Alias** column.
 
@@ -223,7 +232,7 @@ This tells Amazon Connect to use your Lex Bot to interact with users.
 
 **30.** In the left navigation pane, click **Overview**.
 
-**31.** Click **Login as Administrator**.
+**31.** Click **Login URL**.
 
 ![](images/connect-lex-login.png)
 
